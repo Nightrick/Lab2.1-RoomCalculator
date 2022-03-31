@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class RoomCalculator {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		String decision = null;
+		
+		Calculate();
+		
+		System.out.print("Would you like to continue? (y/n): ");
+		decision = scanner.next().toLowerCase();
+		
+		if(decision.equals("y")) {
+			Calculate();
+			System.out.print("Would you like to continue? (y/n): ");
+			decision = scanner.next().toLowerCase();
+			System.out.println("\n");
+		} else System.exit(0);
+		
+	
+					
+				
+	}
+	
+	public static void Calculate() {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Hello and welcome to the Grand Circus Room Calculator!");
+		System.out.println("\n");
+		System.out.print("Enter Length: ");
+		double length = scanner.nextDouble();
+		System.out.print("Enter Width: ");
+		double width = scanner.nextDouble();
+		System.out.println("Area: " + length * width);
+		System.out.println("Perimeter: " + 2 * (length + width));
+		System.out.println("\n");
+		
+	}
+}	
